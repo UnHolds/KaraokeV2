@@ -24,8 +24,7 @@ The importer and server need Rust installed, see [rustup.rs](https://rustup.rs).
 cargo install cargo-make
 ```
 
-Building the web client needs Flutter 3.16.9 (3.19.x doesn't work yet). Install as instructed on [flutter.dev](https://docs.flutter.dev/get-started/install).
-
+Building the web client needs Flutter 3.35.4. Install this version using `fvm` with: `fmv install` then `fvm use` and select the version 2.22.3 (You need to preface the flutter command with fvm eg: `fvm flutter run ..`)
 Then, build the frontend and server using
 
 ```

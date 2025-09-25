@@ -37,7 +37,7 @@ void main() async {
   LocaleSettings.useDeviceLocale();
   log.d('Starting application');
   HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory: kIsWeb ? HydratedStorage.webStorageDirectory : await getApplicationSupportDirectory(),
+    storageDirectory: kIsWeb ? HydratedStorageDirectory.web : HydratedStorageDirectory((await getApplicationSupportDirectory()).path),
   );
 
   runApp(TranslationProvider(

@@ -2,7 +2,7 @@ FROM rust:slim-bookworm AS builder
 
 RUN apt-get update && \
   apt-get install -y curl xz-utils chromium pkg-config libavutil-dev libavformat-dev libavdevice-dev git clang && \
-  curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.3-stable.tar.xz | tar xJ && \
+  curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.35.4-stable.tar.xz | tar xJ && \
   mv flutter /usr/local/flutter && \
   git config --global --add safe.directory /usr/local/flutter
 
