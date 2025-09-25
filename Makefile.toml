@@ -5,10 +5,19 @@ default_to_workspace = false
 script_runner = "@shell"
 script = '''
 cd karaokeparty
-# Generate structured language files
-dart run slang
-# Checks missing and unused translations
-dart run slang analyze
+
+if [ -x "$(command -v flutter)" ]; then
+  # Generate structured language files
+  dart run slang
+  # Checks missing and unused translations
+  dart run slang analyze
+elif [ -x "$(command -v fvm)" ]; then
+  fvm dart run slang
+  fvm dart run slang analyze
+else
+  echo "dart not found"
+  exit 1
+fi
 '''
 
 [tasks.build-flutter]
@@ -16,7 +25,15 @@ dependencies = ["slang"]
 script_runner = "@shell"
 script = '''
 cd karaokeparty
-flutter build web --release --wasm
+if [ -x "$(command -v flutter)" ]; then
+  flutter build web --release --wasm
+elif [ -x "$(command -v fvm)" ]; then
+  fvm flutter build web --release --wasm
+else
+  echo "flutter not found"
+  exit 1
+fi
+
 '''
 
 [tasks.build-server]
