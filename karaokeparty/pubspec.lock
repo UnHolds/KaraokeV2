@@ -230,6 +230,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.7.0-stable"
+  flutter_js:
+    dependency: "direct main"
+    description:
+      name: flutter_js
+      sha256: a04966b102967891ee4947d6e52b450676f16204876ba936e394008ca26db04b
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.5"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -409,10 +417,10 @@ packages:
     dependency: transitive
     description:
       name: meta
-      sha256: e3641ec5d63ebf0d9b41bd43201a66e3fc79a65db5f61fc181f04cd27aab950c
+      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"
       url: "https://pub.dev"
     source: hosted
-    version: "1.16.0"
+    version: "1.17.0"
   nested:
     dependency: transitive
     description:
@@ -674,6 +682,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
+  sync_http:
+    dependency: transitive
+    description:
+      name: sync_http
+      sha256: "7f0cd72eca000d2e026bcd6f990b81d0ca06022ef4e32fb257b30d3d1014a961"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
   synchronized:
     dependency: transitive
     description:
@@ -694,10 +710,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-      sha256: "522f00f556e73044315fa4585ec3270f1808a4b186c936e612cab0b565ff1e00"
+      sha256: ab2726c1a94d3176a45960b6234466ec367179b87dd74f1611adb1f3b5fb9d55
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.6"
+    version: "0.7.7"
   timer_builder:
     dependency: "direct main"
     description:
